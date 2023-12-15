@@ -29,14 +29,14 @@ namespace Trabalho_API_Produto.Controllers
             return Ok(await _productRepository.Get());
         }
 
-        [HttpGet("{id}")]
-        public async Task<IActionResult> GetById(int id)
+        [HttpGet("byidproduct/{id}", Name = "GetByIdProduct")]
+        public async Task<IActionResult> GetByIdProduct(int id)
         {
             return Ok(await _productRepository.GetById(id));
         }
 
-        [HttpGet("ByName/{name}")]
-        public async Task<IActionResult> GetByName(string name)
+        [HttpGet("bynameproduct/{name}", Name = "GetByNameProduct")]
+        public async Task<IActionResult> GetByNameProduct(string name)
         {
             return Ok(await _productRepository.GetByName(name));
         }
