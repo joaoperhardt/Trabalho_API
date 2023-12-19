@@ -59,3 +59,10 @@ C:\Users\joao.erhardt\OneDrive - SENAC-SC\Trabalho_API\Trabalho_API_Produto\Trab
 C:\Users\joao.erhardt\OneDrive - SENAC-SC\Trabalho_API\Trabalho_API_Produto\Trabalho_API_Produto\obj\Debug\net6.0\Trabalho_API_Produto.pdb
 C:\Users\joao.erhardt\OneDrive - SENAC-SC\Trabalho_API\Trabalho_API_Produto\Trabalho_API_Produto\obj\Debug\net6.0\Trabalho_API_Produto.genruntimeconfig.cache
 C:\Users\joao.erhardt\OneDrive - SENAC-SC\Trabalho_API\Trabalho_API_Produto\Trabalho_API_Produto\obj\Debug\net6.0\ref\Trabalho_API_Produto.dll
+C:\Users\joao.erhardt\OneDrive - SENAC-SC\Trabalho_API\Trabalho_API_Produto\Trabalho_API_Produto\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\joao.erhardt\OneDrive - SENAC-SC\Trabalho_API\Trabalho_API_Produto\Trabalho_API_Produto\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\joao.erhardt\OneDrive - SENAC-SC\Trabalho_API\Trabalho_API_Produto\Trabalho_API_Produto\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\joao.erhardt\OneDrive - SENAC-SC\Trabalho_API\Trabalho_API_Produto\Trabalho_API_Produto\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\joao.erhardt\OneDrive - SENAC-SC\Trabalho_API\Trabalho_API_Produto\Trabalho_API_Produto\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\joao.erhardt\OneDrive - SENAC-SC\Trabalho_API\Trabalho_API_Produto\Trabalho_API_Produto\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\joao.erhardt\OneDrive - SENAC-SC\Trabalho_API\Trabalho_API_Produto\Trabalho_API_Produto\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll

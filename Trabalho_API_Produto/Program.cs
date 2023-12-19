@@ -12,6 +12,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddTransient<IProductRepository, ProductRepository>();
 builder.Services.AddTransient<ICategoryRepository, CategoryRepository>();
 builder.Services.AddTransient<IStoreRepository, StoreRepository>();
+builder.Services.AddTransient<IUserRepository, UserRepository>();
 
 builder.Services.AddSwaggerGen();
 
@@ -30,4 +31,4 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.Run();
+app.Run();  
