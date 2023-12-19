@@ -9,5 +9,6 @@ namespace Trabalho_API_Produto.Contracts.Repository
         Task<IEnumerable<UserEntity>> Get();
         Task Update(UserEntity user);
         Task Delete(int id);
+        Task<UserTokenDTO> Login(UserLoginDTO user);
     }
 }

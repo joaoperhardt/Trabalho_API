@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Trabalho_API_Produto.Contracts.Repository;
 using Trabalho_API_Produto.DTO;
 using Trabalho_API_Produto.Entity;
@@ -16,6 +17,7 @@ namespace Trabalho_API_Produto.Controllers
             _userRepository = userRepository;
         }
 
+        [Authorize]
         [HttpPost]
         public async Task<IActionResult> Add(UserDTO user)
         {
@@ -41,6 +43,20 @@ namespace Trabalho_API_Produto.Controllers
         {
             await _userRepository.Delete(id);
             return Ok();
+        }
+
+        [HttpPost]
+        [Route("login")]
+        public async Task<IActionResult> Login(UserLoginDTO user)
+        {
+            try
+            {
+                return Ok(await _userRepository.Login(user));
+            }
+            catch (Exception ex)
+            {
+                return Unauthorized("Usuário ou senha invalidos");
+            }
         }
     }
 }

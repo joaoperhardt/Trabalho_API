@@ -38,5 +38,15 @@ namespace Trabalho_API_Produto.Repository
 
             await Execute(sql, user);
         }
+
+        public async Task<UserTokenDTO> Login(UserLoginDTO user)
+        {
+            string sql = "SELECT * FROM user WHERE Email = @Email AND Password = @Password";
+            UserEntity userLogin = await GetConnection().QueryFirstAsync<UserEntity>(sql, user);
+            return new UserTokenDTO
+            {
+                Token = Authentication.GenerateToken(userLogin)
+            };
+        }
     }
 }
