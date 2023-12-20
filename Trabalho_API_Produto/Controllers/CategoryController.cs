@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Trabalho_API_Produto.Contracts.Repository;
 
 namespace Trabalho_API_Produto.Controllers
@@ -15,6 +16,7 @@ namespace Trabalho_API_Produto.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         public async Task<IActionResult> Get()
         {
             return Ok(await _categoryRepository.Get());

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Trabalho_API_Produto.Contracts.Repository;
 using Trabalho_API_Produto.DTO;
 using Trabalho_API_Produto.Entity;
@@ -17,6 +18,7 @@ namespace Trabalho_API_Produto.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "admin,storekeeper")]
         public async Task<IActionResult> Add(ProductDTO product)
         {
             await _productRepository.Add(product);
@@ -24,12 +26,14 @@ namespace Trabalho_API_Produto.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "admin,storekeeper")]
         public async Task<IActionResult> Get()
         {
             return Ok(await _productRepository.Get());
         }
 
         [HttpGet("byidproduct/{id}", Name = "GetByIdProduct")]
+        [Authorize(Roles = "admin,storekeeper")]
         public async Task<IActionResult> GetByIdProduct(int id)
         {
             return Ok(await _productRepository.GetById(id));
@@ -42,6 +46,7 @@ namespace Trabalho_API_Produto.Controllers
         }
 
         [HttpPut]
+        [Authorize(Roles = "admin,storekeeper")]
         public async Task<IActionResult> Update(ProductEntity product)
         {
             await _productRepository.Update(product);
@@ -49,6 +54,7 @@ namespace Trabalho_API_Produto.Controllers
         }
 
         [HttpDelete]
+        [Authorize(Roles = "admin,storekeeper")]
         public async Task<IActionResult> Delete(int id)
         {
             await _productRepository.Delete(id);

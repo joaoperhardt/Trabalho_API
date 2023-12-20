@@ -17,8 +17,8 @@ namespace Trabalho_API_Produto.Controllers
             _userRepository = userRepository;
         }
 
-        [Authorize]
         [HttpPost]
+        [Authorize]
         public async Task<IActionResult> Add(UserDTO user)
         {
             await _userRepository.Add(user);
@@ -26,12 +26,14 @@ namespace Trabalho_API_Produto.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         public async Task<IActionResult> Get()
         {
             return Ok(await _userRepository.Get());
         }
 
         [HttpPut]
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> Update(UserEntity user)
         {
             await _userRepository.Update(user);
@@ -39,6 +41,7 @@ namespace Trabalho_API_Produto.Controllers
         }
 
         [HttpDelete]
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> Delete(int id)
         {
             await _userRepository.Delete(id);

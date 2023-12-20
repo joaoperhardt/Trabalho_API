@@ -10,7 +10,7 @@ namespace Trabalho_API_Produto.Repository
     {
         public async Task Add(UserDTO user)
         {
-            string sql = "INSERT INTO USER (Name, Email, Password) VALUE (@Name, @Email, @Password)";
+            string sql = "INSERT INTO USER (Name, Email, Password, Role) VALUE (@Name, @Email, @Password, @Role)";
 
             await Execute(sql, user);
         }
@@ -33,7 +33,8 @@ namespace Trabalho_API_Produto.Repository
                 UPDATE USER SET 
                 Name = @Name, 
                 Email = @Email, 
-                Password = @Password
+                Password = @Password,
+                Role = @Role
                 WHERE Id = @Id";
 
             await Execute(sql, user);
